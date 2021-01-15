@@ -1,0 +1,84 @@
+﻿@page
+@model Asssetmanagement3._2.Pages.MakatiDesktop.CreateModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Desktop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" >
+
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Desktop.Department" class="control-label"></label>
+                <input asp-for="Desktop.Department" class="form-control" />
+                <span asp-validation-for="Desktop.Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.CurrentUser" class="control-label"></label>
+                <input asp-for="Desktop.CurrentUser" class="form-control" />
+                <span asp-validation-for="Desktop.CurrentUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.Brand" class="control-label"></label>
+                <input asp-for="Desktop.Brand" class="form-control" />
+                <span asp-validation-for="Desktop.Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.Model" class="control-label"></label>
+                <input asp-for="Desktop.Model" class="form-control" />
+                <span asp-validation-for="Desktop.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.Processor" class="control-label"></label>
+                <input asp-for="Desktop.Processor" class="form-control" />
+                <span asp-validation-for="Desktop.Processor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.RAM" class="control-label"></label>
+                <input asp-for="Desktop.RAM" class="form-control" />
+                <span asp-validation-for="Desktop.RAM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.Remarks" class="control-label"></label>
+                <input asp-for="Desktop.Remarks" class="form-control" />
+                <span asp-validation-for="Desktop.Remarks" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.SerialNumber" class="control-label"></label>
+                <input asp-for="Desktop.SerialNumber" class="form-control" />
+                <span asp-validation-for="Desktop.SerialNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.MonitorBrand" class="control-label"></label>
+                <input asp-for="Desktop.MonitorBrand" class="form-control" />
+                <span asp-validation-for="Desktop.MonitorBrand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Desktop.MonitorSerialNumber" class="control-label"></label>
+                <input asp-for="Desktop.MonitorSerialNumber" class="form-control" />
+                <span asp-validation-for="Desktop.MonitorSerialNumber" class="text-danger"></span>
+            </div>
+
+           
+            <div class="form-group" >
+                
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

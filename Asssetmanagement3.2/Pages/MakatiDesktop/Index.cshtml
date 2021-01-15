@@ -1,0 +1,135 @@
+﻿@page
+@model Asssetmanagement3._2.Pages.MakatiDesktop.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@if ((string)TempData["Referrer"] == "SaveRegister")
+{
+    <div class="alert alert-success">
+        <strong>You have Created New User successfully</strong>
+    </div>
+}
+
+@if ((string)TempData["Referrers"] == "Edited")
+{
+    <div class="alert alert-success">
+        <strong>You have Edited successfully</strong>
+    </div>
+}
+
+
+<h2 class="text-center"><i class="ion ion-person-add"></i>Makati Desktop User</h2>
+
+
+
+<form>
+
+    Current User:<input type="text" name="SearchString">
+    <input type="submit" value="Search" class="btn btn-primary" />
+
+</form>
+
+
+<form method="post" asp-page-handler="ExportExcel" style="float: right;">
+    <button class="btn btn-success btn-secondary order-button ">ExportExcel</button>
+</form>
+
+<p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    <a asp-page="Create" class="btn btn-success text-white"><i class="fas fa-random"></i>Create New</a>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].Department)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].CurrentUser)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].Brand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].Model)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].Processor)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].RAM)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].Remarks)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].SerialNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].MonitorBrand)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].MonitorSerialNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Desktop[0].CreatedDate)
+                </th>
+                
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Desktop)
+            {
+            <tr>
+                <td>
+
+                    <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-primary text-white">Edit  </a>
+                    <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-primary text-white">Details</a>
+                    <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-danger text-white">Delete</a>
+
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Department)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CurrentUser)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Brand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Processor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.RAM)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Remarks)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.SerialNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MonitorBrand)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MonitorSerialNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedDate)
+                </td>
+
+               
+            </tr>
+            }
+        </tbody>
+    </table>
+
+    <p>
+    

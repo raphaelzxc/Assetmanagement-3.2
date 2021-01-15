@@ -1,0 +1,85 @@
+﻿@page
+@model Asssetmanagement3._2.Pages.MinesiteLaptop.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>LaptopMinesite</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.Department)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.CurrentUser)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.CurrentUser)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.Brand)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.Brand)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.Model)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.Model)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.Processor)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.Processor)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.Ram)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.Ram)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.Remarks)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.Remarks)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.CreatedByUser)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.CreatedByUser)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.CreatedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.CreatedDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.ModifiedByUser)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.ModifiedByUser)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LaptopMinesite.ModifiedDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LaptopMinesite.ModifiedDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.LaptopMinesite.ID">Edit</a> |
+    <a asp-page="./Index">Back to List</a>
+</div>

@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql",
+      "connectionId": "DefaultConnection"
+    },
+    "mssql2": {
+      "type": "mssql",
+      "connectionId": "Desktop2Context"
+    },
+    "mssql3": {
+      "type": "mssql",
+      "connectionId": "Laptop1Context"
+    },
+    "mssql4": {
+      "type": "mssql",
+      "connectionId": "MinesiteContext"
+    }
+  }
+}

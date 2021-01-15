@@ -1,0 +1,66 @@
+﻿@page
+@model Asssetmanagement3._2.Pages.MinesiteLaptop.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>LaptopMinesite</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="LaptopMinesite.Department" class="control-label"></label>
+                <input asp-for="LaptopMinesite.Department" class="form-control" />
+                <span asp-validation-for="LaptopMinesite.Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopMinesite.CurrentUser" class="control-label"></label>
+                <input asp-for="LaptopMinesite.CurrentUser" class="form-control" />
+                <span asp-validation-for="LaptopMinesite.CurrentUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopMinesite.Brand" class="control-label"></label>
+                <input asp-for="LaptopMinesite.Brand" class="form-control" />
+                <span asp-validation-for="LaptopMinesite.Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopMinesite.Model" class="control-label"></label>
+                <input asp-for="LaptopMinesite.Model" class="form-control" />
+                <span asp-validation-for="LaptopMinesite.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopMinesite.Processor" class="control-label"></label>
+                <input asp-for="LaptopMinesite.Processor" class="form-control" />
+                <span asp-validation-for="LaptopMinesite.Processor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopMinesite.Ram" class="control-label"></label>
+                <input asp-for="LaptopMinesite.Ram" class="form-control" />
+                <span asp-validation-for="LaptopMinesite.Ram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LaptopMinesite.Remarks" class="control-label"></label>
+                <input asp-for="LaptopMinesite.Remarks" class="form-control" />
+                <span asp-validation-for="LaptopMinesite.Remarks" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="LaptopMinesite.ID" />
+           
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

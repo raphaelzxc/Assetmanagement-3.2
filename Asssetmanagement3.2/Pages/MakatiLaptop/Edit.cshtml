@@ -1,0 +1,66 @@
+﻿@page
+@model Asssetmanagement3._2.Pages.MakatiLaptop.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Laptop</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Laptop.Department" class="control-label"></label>
+                <input asp-for="Laptop.Department" class="form-control" />
+                <span asp-validation-for="Laptop.Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laptop.CurrentUser" class="control-label"></label>
+                <input asp-for="Laptop.CurrentUser" class="form-control" />
+                <span asp-validation-for="Laptop.CurrentUser" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laptop.Brand" class="control-label"></label>
+                <input asp-for="Laptop.Brand" class="form-control" />
+                <span asp-validation-for="Laptop.Brand" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laptop.Model" class="control-label"></label>
+                <input asp-for="Laptop.Model" class="form-control" />
+                <span asp-validation-for="Laptop.Model" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laptop.Processor" class="control-label"></label>
+                <input asp-for="Laptop.Processor" class="form-control" />
+                <span asp-validation-for="Laptop.Processor" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laptop.Ram" class="control-label"></label>
+                <input asp-for="Laptop.Ram" class="form-control" />
+                <span asp-validation-for="Laptop.Ram" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Laptop.Remarks" class="control-label"></label>
+                <input asp-for="Laptop.Remarks" class="form-control" />
+                <span asp-validation-for="Laptop.Remarks" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="Laptop.ID" />
+            
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
